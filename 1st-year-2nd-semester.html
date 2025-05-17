@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1st Year - 2nd Semester Courses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slideInUp {
+      animation: slideInUp 0.6s ease forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+
+  <header class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">📕 1st Year - 2nd Semester</h1>
+    <button onclick="goBack()" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">Back</button>
+  </header>
+
+  <main class="flex-grow p-6 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+    <a href="pdfs/data-structures.pdf" target="_blank" class="animate-slideInUp bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ease-in-out border border-gray-200 dark:border-gray-700 flex flex-col justify-between" >
+      <div class="flex items-center space-x-4 mb-4">
+        <!-- Heroicon: Collection -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 2v4M8 2v4M3 10h18" />
+        </svg>
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Data Structures</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400">Understanding arrays, lists, trees, and graphs.</p>
+    </a>
+
+    <a href="pdfs/database-systems.pdf" target="_blank" class="animate-slideInUp bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ease-in-out border border-gray-200 dark:border-gray-700 flex flex-col justify-between" style="animation-delay: 0.1s;">
+      <div class="flex items-center space-x-4 mb-4">
+        <!-- Heroicon: Database -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5" />
+        </svg>
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Database Systems</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400">Basics of database design and SQL.</p>
+    </a>
+
+    <a href="pdfs/logic-design.pdf" target="_blank" class="animate-slideInUp bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ease-in-out border border-gray-200 dark:border-gray-700 flex flex-col justify-between" style="animation-delay: 0.2s;">
+      <div class="flex items-center space-x-4 mb-4">
+        <!-- Heroicon: Chip -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="6" height="6" rx="1" ry="1" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h3M18 12h3M12 3v3M12 18v3" />
+        </svg>
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Logic Design</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400">Introduction to digital logic circuits and systems.</p>
+    </a>
+
+    <a href="pdfs/communication-skills.pdf" target="_blank" class="animate-slideInUp bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ease-in-out border border-gray-200 dark:border-gray-700 flex flex-col justify-between" style="animation-delay: 0.3s;">
+      <div class="flex items-center space-x-4 mb-4">
+        <!-- Heroicon: Chat Alt 2 -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Communication Skills</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400">Develop your interpersonal and presentation skills.</p>
+    </a>
+
+    <a href="pdfs/logic-design.pdf" target="_blank" class="animate-slideInUp bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ease-in-out border border-gray-200 dark:border-gray-700 flex flex-col justify-between" style="animation-delay: 0.2s;">
+      <div class="flex items-center space-x-4 mb-4">
+        <!-- Heroicon: Chip -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="6" height="6" rx="1" ry="1" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h3M18 12h3M12 3v3M12 18v3" />
+        </svg>
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Logic Design</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400">Introduction to digital logic circuits and systems.</p>
+    </a>
+  </main>
+
+  <script>
+    function goBack() {
+      window.location.href = '1st-year.html';
+    }
+  </script>
+
+</body>
+</html>

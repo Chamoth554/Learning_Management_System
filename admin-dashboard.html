@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">📊 Admin Dashboard</h1>
+    <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Logout</button>
+  </header>
+
+  <!-- Main content -->
+  <main class="p-6 space-y-6">
+    <section class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+      <h2 class="text-lg font-semibold mb-4">Overview</h2>
+      <p>Welcome, Admin! You can manage courses and users from here.</p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h3 class="text-md font-bold mb-2">📚 Manage Courses</h3>
+        <ul class="list-disc list-inside">
+          <li>Add new courses</li>
+          <li>Edit course content</li>
+          <li>Delete inactive courses</li>
+        </ul>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h3 class="text-md font-bold mb-2">👥 Manage Students</h3>
+        <ul class="list-disc list-inside">
+          <li>View enrolled students</li>
+          <li>Approve registrations</li>
+          <li>Remove inactive users</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function logout() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

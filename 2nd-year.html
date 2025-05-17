@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2nd Year - Select Semester</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-slideFadeIn {
+      animation: slideFadeIn 0.8s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">🎓 2nd Year - Select Semester</h1>
+    <button onclick="goBack()" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">Back</button>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow flex items-center justify-center p-6">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded shadow-lg w-full max-w-md animate-slideFadeIn text-center">
+      <h2 class="text-2xl font-bold mb-6">Choose Semester</h2>
+      <div class="space-y-4">
+        <button onclick="goTo('2nd-year-1st-semester.html')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded text-lg transition-all duration-300 transform hover:scale-105">
+          📘 1st Semester
+        </button>
+        <button onclick="goTo('2nd-year-2nd-semester.html')" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded text-lg transition-all duration-300 transform hover:scale-105">
+          📗 2nd Semester
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function goBack() {
+      window.location.href = 'student-dashboard.html';
+    }
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

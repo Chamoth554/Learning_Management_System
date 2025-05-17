@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fadeInUp {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* Button hover scale */
+    .btn-animate:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    /* Footer fade-in */
+    .footer-animate {
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-delay: 0.8s;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Main content -->
+  <main class="flex-grow flex items-center justify-center px-4">
+    <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 w-full max-w-md fadeInUp">
+
+      <h2 class="text-2xl font-bold mb-6 text-center">Login to LMS</h2>
+
+      <!-- Student Login Button -->
+      <div class="mb-6 text-center">
+        <button
+          onclick="window.location.href='student-dashboard.html'"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition btn-animate"
+        >
+          🎓 Login as Student
+        </button>
+      </div>
+
+      <hr class="my-6 border-gray-300 dark:border-gray-600" />
+
+      <!-- Admin Login Form -->
+      <form id="adminLoginForm" class="space-y-4">
+        <h3 class="text-lg font-semibold">Admin Login</h3>
+        <input
+          type="text"
+          id="adminUsername"
+          placeholder="Username"
+          required
+          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700"
+        />
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Password"
+          required
+          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700"
+        />
+        <button
+          type="submit"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition btn-animate"
+        >
+          🔐 Login as Admin
+        </button>
+      </form>
+
+      <!-- Error message -->
+      <p id="errorMsg" class="mt-4 text-red-500 text-sm hidden">Invalid credentials. Try again.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-animate bg-gray-200 dark:bg-gray-800 text-center py-4 text-gray-700 dark:text-gray-300 select-none">
+    &copy; 2025 Chamoth Anuruddha - All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById('adminLoginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const uname = document.getElementById('adminUsername').value;
+      const pass = document.getElementById('adminPassword').value;
+
+      if (uname === 'admin' && pass === '1234') {
+        window.location.href = 'admin-dashboard.html';
+      } else {
+        errorMsg.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
